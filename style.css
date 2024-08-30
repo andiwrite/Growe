@@ -1,0 +1,220 @@
+/* General Reset */
+* {
+    font-family: "Cinzel", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f4f4; /* Light background for a clean look */
+    color: #63431e; /* Deep brown color for text */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px; /* Reduced padding */
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Reduced gap */
+}
+
+.nav a {
+    color: #63431e; /* Brown color for links */
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #c08c5d; /* Lighter brown for hover effect */
+    text-decoration: underline 1px #c08c5d;
+    text-underline-offset: 5px;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Reduced padding */
+    position: relative;
+    overflow: hidden; /* Prevent scrolling within main content */
+}
+
+.hero-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Reduced gap */
+    margin-bottom: 10px; /* Reduced space between images and quotes */
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-image {
+    width: 250px; /* Reduced size */
+    height: auto;
+    margin-bottom: -20px; /* Adjusted for smaller screens */
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.hero-images:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Adjust the position so the backs face each other */
+.hero-images .hero-image:nth-child(1) {
+    transform: scaleX(-1); /* Flipped horizontally */
+}
+
+/* CTA Section */
+.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px; /* Reduced padding */
+    animation: fadeIn 2s ease-in-out;
+}
+
+.quote-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px; /* Reduced max-width */
+    margin-bottom: 10px; /* Reduced margin */
+    overflow: hidden; /* Prevent overflow */
+}
+
+
+.quote-card {
+    background-color: #ffffff; /* White background */
+    padding: 10px; /* Reduced padding */
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    color: #63431e; /* Brown text color */
+    flex: 1;
+    margin: 0 5px; /* Reduced margin */
+    text-align: center;
+    transition: transform 0.3s;
+    z-index: 1000;
+}
+
+.quote-card:hover {
+    transform: scale(1.05);
+}
+
+.quote-card p {
+    font-size: 16px; /* Reduced font size */
+    text-align: center;
+}
+
+/* Buttons Styling */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Reduced gap */
+    margin-top: 15px;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 8px 16px; /* Reduced padding */
+    font-size: 14px; /* Reduced font size */
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #63431e; /* Deep brown for buttons */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button-link:hover {
+    background-color: #8b5e3c; /* Lighter brown for hover effect */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #63431e; /* Deep brown background */
+    color: white;
+    text-align: center;
+    padding: 8px; /* Reduced padding */
+    flex-shrink: 0;
+    width: 100%;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+footer marquee {
+    color: white;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-image {
+        width: 200px; /* Further reduced size */
+    }
+    .quote-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .quote-card {
+        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 14px; /* Reduced font size */
+    }
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-image {
+        width: 150px; /* Further reduced size */
+    }
+    .quote-card p {
+        font-size: 12px; /* Reduced font size */
+    }
+    header {
+        padding: 10px 20px; /* Further reduced padding */
+    }
+    .nav ul {
+        gap: 10px; /* Further reduced gap */
+    }
+    .cta {
+        padding: 5px; /* Further reduced padding */
+    }
+    footer {
+        padding: 6px; /* Further reduced padding */
+    }
+}

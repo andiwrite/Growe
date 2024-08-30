@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes</title>
+    <link rel="stylesheet" href="quotes-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <style>
+        .quote-card {
+            position: relative;
+        }
+        .like-button {
+            margin-right: 10px;
+        }
+        .rating {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
+        .rating button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .rating button.selected {
+            color: gold;
+        }
+        .copy-status {
+            display: none;
+            color: green;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="textlogo.png" alt="Growe">
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sign-in.html">Sign In</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="submit.html">Submit a Quote</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="quotes-container">
+            <h1>Quotes</h1>
+            <div class="quote-card-container">
+                <div class="quote-card">
+                    <p>"They asked, ¨Do you love her to death¨ I said, ¨Speak of her over my grave and watch how she brings me back to life."</p>
+                    <footer>
+                        <cite>- Franklin D. Roosevelt</cite>
+                        <div class="quote-actions">
+                            <button class="like-button" onclick="likeQuote(this)">Like <span class="like-count">0</span></button>
+                            <button class="copy-button" onclick="copyQuote(this)">Copy</button>
+                            <div class="copy-status">Copied!</div>
+                        </div>
+                        <div class="rating">
+                            <button onclick="rateQuote(this, 1)">☆</button>
+                            <button onclick="rateQuote(this, 2)">☆</button>
+                            <button onclick="rateQuote(this, 3)">☆</button>
+                            <button onclick="rateQuote(this, 4)">☆</button>
+                            <button onclick="rateQuote(this, 5)">☆</button>
+                        </div>
+                    </footer>
+                </div>
+                <div class="quote-card">
+                    <p>"In the end, we will remember not the words of our enemies, but the silence of our friends."</p>
+                    <footer>
+                        <cite>- Martin Luther King Jr.</cite>
+                        <div class="quote-actions">
+                            <button class="like-button" onclick="likeQuote(this)">Like <span class="like-count">0</span></button>
+                            <button class="copy-button" onclick="copyQuote(this)">Copy</button>
+                            <div class="copy-status">Copied!</div>
+                        </div>
+                        <div class="rating">
+                            <button onclick="rateQuote(this, 1)">☆</button>
+                            <button onclick="rateQuote(this, 2)">☆</button>
+                            <button onclick="rateQuote(this, 3)">☆</button>
+                            <button onclick="rateQuote(this, 4)">☆</button>
+                            <button onclick="rateQuote(this, 5)">☆</button>
+                        </div>
+                    </footer>
+                </div>
+                <div class="quote-card">
+                    <p>"We mistaken our insecurities for caution, losing what was meant for us, even our smile."</p>
+                    <footer>
+                        <cite>- and_iwrite</cite>
+                        <div class="quote-actions">
+                            <button class="like-button" onclick="likeQuote(this)">Like <span class="like-count">0</span></button>
+                            <button class="copy-button" onclick="copyQuote(this)">Copy</button>
+                            <div class="copy-status">Copied!</div>
+                        </div>
+                        <div class="rating">
+                            <button onclick="rateQuote(this, 1)">☆</button>
+                            <button onclick="rateQuote(this, 2)">☆</button>
+                            <button onclick="rateQuote(this, 3)">☆</button>
+                            <button onclick="rateQuote(this, 4)">☆</button>
+                            <button onclick="rateQuote(this, 5)">☆</button>
+                        </div>
+                    </footer>
+                </div>
+                <div class="quote-card">
+                    <p>"Nature is a silent poet, with every leaf and petal telling stories of beauty and grace."</p>
+                    <footer>
+                        <cite>- and_iwrite.</cite>
+                        <div class="quote-actions">
+                            <button class="like-button" onclick="likeQuote(this)">Like <span class="like-count">0</span></button>
+                            <button class="copy-button" onclick="copyQuote(this)">Copy</button>
+                            <div class="copy-status">Copied!</div>
+                        </div>
+                        <div class="rating">
+                            <button onclick="rateQuote(this, 1)">☆</button>
+                            <button onclick="rateQuote(this, 2)">☆</button>
+                            <button onclick="rateQuote(this, 3)">☆</button>
+                            <button onclick="rateQuote(this, 4)">☆</button>
+                            <button onclick="rateQuote(this, 5)">☆</button>
+                        </div>
+                    </footer>
+                </div>
+                <div class="quote-card">
+                    <p>"What if our paths crossed again, not by chace but by choice? What if every 'what if' was a step towards the life we almost had?"</p>
+                    <footer>
+                        <cite>- and_iwrite.</cite>
+                        <div class="quote-actions">
+                            <button class="like-button" onclick="likeQuote(this)">Like <span class="like-count">0</span></button>
+                            <button class="copy-button" onclick="copyQuote(this)">Copy</button>
+                            <div class="copy-status">Copied!</div>
+                        </div>
+                        <div class="rating">
+                            <button onclick="rateQuote(this, 1)">☆</button>
+                            <button onclick="rateQuote(this, 2)">☆</button>
+                            <button onclick="rateQuote(this, 3)">☆</button>
+                            <button onclick="rateQuote(this, 4)">☆</button>
+                            <button onclick="rateQuote(this, 5)">☆</button>
+                        </div>
+                    </footer>
+                </div>
+                <div class="quote-card">
+                    <p>"Take a book, take a look, and travel through time and space with every turn of the page."</p>
+                    <footer>
+                        <cite>- and_iwrite.</cite>
+                        <div class="quote-actions">
+                            <button class="like-button" onclick="likeQuote(this)">Like <span class="like-count">0</span></button>
+                            <button class="copy-button" onclick="copyQuote(this)">Copy</button>
+                            <div class="copy-status">Copied!</div>
+                        </div>
+                        <div class="rating">
+                            <button onclick="rateQuote(this, 1)">☆</button>
+                            <button onclick="rateQuote(this, 2)">☆</button>
+                            <button onclick="rateQuote(this, 3)">☆</button>
+                            <button onclick="rateQuote(this, 4)">☆</button>
+                            <button onclick="rateQuote(this, 5)">☆</button>
+                        </div>
+                    </footer>
+                </div>
+                <div class="quote-card">
+                    <p>"If wishes were horsess, my dreams would ride on them each passing time. If desires were the stars, they'd light up the night formed in the hearts of the helpless."</p>
+                    <footer>
+                        <cite>- and_iwrite.</cite>
+                        <div class="quote-actions">
+                            <button class="like-button" onclick="likeQuote(this)">Like <span class="like-count">0</span></button>
+                            <button class="copy-button" onclick="copyQuote(this)">Copy</button>
+                            <div class="copy-status">Copied!</div>
+                        </div>
+                        <div class="rating">
+                            <button onclick="rateQuote(this, 1)">☆</button>
+                            <button onclick="rateQuote(this, 2)">☆</button>
+                            <button onclick="rateQuote(this, 3)">☆</button>
+                            <button onclick="rateQuote(this, 4)">☆</button>
+                            <button onclick="rateQuote(this, 5)">☆</button>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Growe. All rights reserved.</p>
+    </footer>
+    <script>
+        function likeQuote(button) {
+            let likeCount = button.querySelector('.like-count');
+            let count = parseInt(likeCount.innerText);
+            likeCount.innerText = count + 1;
+        }
+
+        function copyQuote(button) {
+            let quoteElement = button.parentElement.parentElement.querySelector('p');
+            let authorElement = button.parentElement.querySelector('cite');
+            let quoteText = quoteElement.innerText;
+            let authorName = authorElement.innerText;
+            let textToCopy = `${quoteText}\n${authorName}`;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                let status = button.parentElement.querySelector('.copy-status');
+                status.style.display = 'block';
+                setTimeout(() => status.style.display = 'none', 2000);
+            });
+        }
+
+        function rateQuote(button, rating) {
+            let ratingButtons = button.parentElement.querySelectorAll('button');
+            ratingButtons.forEach(btn => btn.classList.remove('selected'));
+            for (let i = 0; i < rating; i++) {
+                ratingButtons[i].classList.add('selected');
+            }
+        }
+    </script>
+</body>
+</html>

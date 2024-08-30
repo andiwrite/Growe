@@ -1,0 +1,107 @@
+/* General Reset */
+* {
+    font-family: "Cinzel", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f4f4; /* Light background for a clean look */
+    color: #63431e; /* Deep brown color for text */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 20% 20%;
+}
+
+header .logo img {
+    max-height: 50px;
+}
+
+header .nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header .nav ul li {
+    margin-left: 20px;
+}
+
+header .nav ul li a {
+    color: #63431e; /* Deep brown color for links */
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+header .nav ul li a:hover {
+    color: #c08c5d; /* Lighter brown for hover effect */
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.thank-you-container {
+    background-color: #ffffff; /* White background for content */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    color: #333;
+}
+
+.thank-you-container h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #63431e; /* Deep brown color for heading */
+}
+
+.thank-you-container p {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.return-link {
+    color: #63431e; /* Deep brown for link */
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.return-link:hover {
+    color: #c08c5d; /* Lighter brown for hover effect */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #63431e; /* Deep brown background */
+    color: white;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20% 20% 0 0;
+}

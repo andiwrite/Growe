@@ -1,0 +1,149 @@
+/* General Reset */
+* {
+    font-family: "Cinzel", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f4f4; /* Light background for a clean look */
+    color: #63431e; /* Deep brown color for text */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 20% 20%;
+}
+
+header .logo img {
+    max-height: 50px;
+}
+
+header .nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header .nav ul li {
+    margin-left: 20px;
+}
+
+header .nav ul li a {
+    color: #63431e; /* Deep brown color for links */
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+header .nav ul li a:hover {
+    color: #c08c5d; /* Lighter brown for hover effect */
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.quotes-container {
+    background-color: #ffffff; /* White background for content */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.quotes-container h1 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #63431e; /* Deep brown color for heading */
+}
+
+.quote-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.quote-card {
+    background-color: #ffffff; /* White background for quote cards */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    color: #63431e; /* Deep brown text color */
+    text-align: center;
+}
+
+.quote-card p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.quote-card footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.quote-card cite {
+    font-style: italic;
+    color: #ffffff; /* Slightly lighter brown for citation */
+}
+
+.quote-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.like-button, .copy-button {
+    background-color: #63431e; /* Deep brown for buttons */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.like-button:hover, .copy-button:hover {
+    background-color: #8b5e3c; /* Lighter brown for hover effect */
+    transform: scale(1.05);
+}
+
+.copy-button {
+    background-color: #8b5e3c; /* Lighter brown for copy button */
+}
+
+.copy-button:hover {
+    background-color: #63431e; /* Deep brown for hover effect */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #63431e; /* Deep brown background */
+    color: white;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20% 20% 0 0;
+}

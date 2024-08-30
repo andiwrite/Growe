@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Growe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <style>
+        /* Interactive Marquee Styling */
+        footer marquee {
+            color: white;
+            display: block;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+            font-size: 18px;
+            font-weight: 700;
+            transition: transform 0.3s;
+        }
+
+        footer marquee:hover {
+            animation-play-state: paused;
+        }
+
+        /* Quote Card Animation */
+        .quote-card {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .quote-card:first-child {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="textlogo.png" alt="Growe">
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="sign-in.html">Sign In</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="hero-images">
+            <img src="boy.png" alt="Boy 1" class="hero-image">
+            <img src="boy.png" alt="Boy 2" class="hero-image">
+        </div>
+        <div class="cta">
+            <div class="quote-container">
+                <div class="quote-card">
+                    <p>I grow a seed of faith, to harvest my blessings. Through Christ's sacrifice, I find the perfect soil for that. <cite>- and_iwrite</cite></p>
+                </div>
+                <div class="quote-card">
+                    <p>I'm still trying my best in case you're not seeing it. My feet were hurting so I had to crawl a little. <br><cite>- and_iwrite</cite></p>
+                </div>
+                <div class="quote-card">
+                    <p>Ink refilled, heart intact. Hopefully, we flip to the next chapter. <br><cite>- and_iwrite</cite></p>
+                </div>
+                <div class="quote-card">
+                    <p>I hate the fact that I am grown. I hate the act of hiding my feelings <cite>- and_iwrite</cite></p>
+                </div>
+            </div>
+            <div class="buttons">
+                <a href="sign-in.html" class="button-link">Sign In</a>
+                <a href="sign-up.html" class="button-link">Sign Up</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <marquee behavior="" direction="left" class="marq">
+            I used to think I was lost, but now I see I was just exploring. Every wrong turn was a lesson, a chapter in the story of becoming who I am. I am not defined by my past mistakes but by how I rise above them. My strength is not in perfection but in the courage to keep going, even when the road gets rough. My value isn’t determined by others' approval but by the love I hold for myself. I am a work in progress, constantly evolving, growing, and becoming more of who I am meant to be. The journey is mine, and I am learning to cherish every step, every stumble, and every victory. In this moment, I choose to be gentle with myself, to honor my journey, and to trust that I am exactly where I need to be.
+        </marquee>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Quote Rotation
+            const quotes = document.querySelectorAll('.quote-card');
+            let currentIndex = 0;
+
+            function showNextQuote() {
+                quotes[currentIndex].style.opacity = 0;
+                currentIndex = (currentIndex + 1) % quotes.length;
+                quotes[currentIndex].style.opacity = 1;
+            }
+
+            setInterval(showNextQuote, 3000); // Change quote every 3 seconds
+
+            
+        });
+    </script>
+</body>
+</html>
