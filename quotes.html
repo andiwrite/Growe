@@ -6,49 +6,28 @@
     <title>Quotes</title>
     <link rel="stylesheet" href="quotes-style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
-    <style>
-        .quote-card {
-            position: relative;
-        }
-        .like-button {
-            margin-right: 10px;
-        }
-        .rating {
-            display: flex;
-            align-items: center;
-            margin-top: 5px;
-        }
-        .rating button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-        }
-        .rating button.selected {
-            color: gold;
-        }
-        .copy-status {
-            display: none;
-            color: green;
-            margin-top: 5px;
-        }
-    </style>
 </head>
 <body>
     <header>
         <div class="logo">
             <img src="textlogo.png" alt="Growe">
         </div>
-        <div class="nav">
+        <nav class="nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="sign-in.html">Sign In</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="submit.html">Submit a Quote</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
+    <p class="relax">Relax your brain while you read</p>
+        <audio controls autoplay>
+            <source src="Grace of Light.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
     <main>
+        
         <div class="quotes-container">
             <h1>Quotes</h1>
             <div class="quote-card-container">
@@ -178,6 +157,7 @@
                         </div>
                     </footer>
                 </div>
+           
             </div>
         </div>
     </main>
@@ -192,20 +172,20 @@
         }
 
         function copyQuote(button) {
-            let quoteElement = button.parentElement.parentElement.querySelector('p');
-            let authorElement = button.parentElement.querySelector('cite');
+            let quoteElement = button.closest('.quote-card').querySelector('p');
+            let authorElement = button.closest('.quote-card').querySelector('cite');
             let quoteText = quoteElement.innerText;
             let authorName = authorElement.innerText;
             let textToCopy = `${quoteText}\n${authorName}`;
             navigator.clipboard.writeText(textToCopy).then(() => {
-                let status = button.parentElement.querySelector('.copy-status');
+                let status = button.closest('.quote-actions').querySelector('.copy-status');
                 status.style.display = 'block';
-                setTimeout(() => status.style.display = 'none', 2000);
+                setTimeout(() => status.style.display = 'none', 500);
             });
         }
 
         function rateQuote(button, rating) {
-            let ratingButtons = button.parentElement.querySelectorAll('button');
+            let ratingButtons = button.closest('.rating').querySelectorAll('button');
             ratingButtons.forEach(btn => btn.classList.remove('selected'));
             for (let i = 0; i < rating; i++) {
                 ratingButtons[i].classList.add('selected');

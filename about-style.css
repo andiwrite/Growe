@@ -1,4 +1,4 @@
-/* General Reset */
+
 * {
     font-family: "Cinzel", Arial, Helvetica, sans-serif;
     font-weight: 600;
@@ -7,22 +7,22 @@
     box-sizing: border-box;
 }
 
-/* Body Styling */
+
 body {
-    background-color: #f4f4f4; /* Light background for a clean look */
-    color: #63431e; /* Deep brown color for text */
+    background-color: #f4f4f4; 
+    color: #63431e;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* Header Styling */
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 80px;
-    background-color: #ffffff; /* White background */
+    background-color: #ffffff; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 0 0 20% 20%;
 }
@@ -30,6 +30,7 @@ header {
 header .logo img {
     max-height: 50px;
 }
+
 
 header .nav ul {
     display: flex;
@@ -39,21 +40,40 @@ header .nav ul {
 }
 
 header .nav ul li {
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 header .nav ul li a {
-    color: #63431e; /* Deep brown color for links */
+    color: #63431e; 
     text-decoration: none;
     font-weight: 700;
     transition: color 0.3s;
 }
 
 header .nav ul li a:hover {
-    color: #c08c5d; /* Lighter brown for hover effect */
+    color: #c08c5d;
 }
 
-/* Main Content */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    header .nav ul {
+        flex-direction: grid;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    header .nav ul li {
+        margin: 5px 0;
+    }
+}
+
+
 main {
     flex: 1;
     display: flex;
@@ -63,20 +83,20 @@ main {
 }
 
 .about-container {
-    background-color: #ffffff; /* White background for content */
+    background-color: #ffffff; 
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     max-width: 800px;
     width: 100%;
     text-align: center;
-    color: #63431e; /* Deep brown text color */
+    color: #63431e; 
 }
 
 .about-container h1 {
     margin-bottom: 30px;
     font-size: 32px;
-    color: #63431e; /* Deep brown color for heading */
+    color: #63431e; 
 }
 
 .about-container p {
@@ -86,21 +106,21 @@ main {
 }
 
 .about-container a {
-    color: #63431e; /* Deep brown color for links */
+    color: #63431e; 
     text-decoration: none;
     font-weight: 900;
 }
 
 .about-container a:hover {
     text-decoration: underline;
-    color: #c08c5d; /* Lighter brown for hover effect */
+    color: #c08c5d; 
 }
 
-/* Footer Styling */
+
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #63431e; /* Deep brown background */
+    background-color: #63431e; 
     color: white;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 20% 20% 0 0;

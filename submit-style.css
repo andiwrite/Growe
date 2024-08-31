@@ -1,4 +1,4 @@
-/* General Reset */
+
 * {
     font-family: "Cinzel", Arial, Helvetica, sans-serif;
     font-weight: 600;
@@ -7,22 +7,22 @@
     box-sizing: border-box;
 }
 
-/* Body Styling */
+
 body {
-    background-color: #f4f4f4; /* Light background for a clean look */
-    color: #63431e; /* Deep brown color for text */
+    background-color: #f4f4f4; 
+    color: #63431e; 
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* Header Styling */
+
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px 80px;
-    background-color: #ffffff; /* White background */
+    background-color: #ffffff; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 0 0 20% 20%;
     text-align: center;
@@ -39,7 +39,7 @@ header .nav ul {
     margin: 0;
     padding: 0;
     justify-content: center;
-    flex-wrap: wrap; /* Allows the links to wrap if they don't fit in one line */
+    flex-wrap: wrap; 
 }
 
 header .nav ul li {
@@ -47,7 +47,7 @@ header .nav ul li {
 }
 
 header .nav ul li a {
-    color: #63431e; /* Deep brown color for links */
+    color: #63431e; 
     text-decoration: none;
     font-weight: 700;
     transition: color 0.3s;
@@ -55,10 +55,10 @@ header .nav ul li a {
 }
 
 header .nav ul li a:hover {
-    color: #c08c5d; /* Lighter brown for hover effect */
+    color: #c08c5d; 
 }
 
-/* Main Content */
+
 main {
     flex: 1;
     display: flex;
@@ -68,7 +68,7 @@ main {
 }
 
 .submit-container {
-    background-color: #ffffff; /* White background for content */
+    background-color: #ffffff; 
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
@@ -81,7 +81,7 @@ main {
 .submit-container h1 {
     margin-bottom: 30px;
     font-size: 32px;
-    color: #63431e; /* Deep brown color for heading */
+    color: #63431e; 
 }
 
 .submit-container .input-group {
@@ -108,7 +108,7 @@ main {
 .submit-container .submit-button {
     width: 100%;
     padding: 12px;
-    background-color: #63431e; /* Deep brown for button */
+    background-color: #63431e; 
     border: none;
     color: white;
     font-size: 16px;
@@ -119,31 +119,31 @@ main {
 }
 
 .submit-container .submit-button:hover {
-    background-color: #8b5e3c; /* Lighter brown for hover effect */
+    background-color: #8b5e3c; 
 }
 
 a {
     text-decoration: none;
 }
 
-/* Footer Styling */
+
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #63431e; /* Deep brown background */
+    background-color: #63431e; 
     color: white;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 20% 20% 0 0;
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 768px) {
     header {
         padding: 15px 40px;
     }
 
     header .nav ul li a {
-        font-size: 16px; /* Slightly smaller font for medium screens */
+        font-size: 16px; 
     }
 
     .submit-container {
@@ -161,7 +161,7 @@ footer {
     }
 
     header .nav ul li a {
-        font-size: 14px; /* Smaller font for small screens */
+        font-size: 14px; 
     }
 
     .submit-container {
@@ -169,6 +169,6 @@ footer {
     }
 
     .submit-container h1 {
-        font-size: 24px; /* Adjust font size for smaller screens */
+        font-size: 24px; 
     }
 }

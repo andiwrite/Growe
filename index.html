@@ -4,34 +4,8 @@
     <title>Growe</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
-    <style>
-        /* Interactive Marquee Styling */
-        footer marquee {
-            color: white;
-            display: block;
-            width: 100%;
-            white-space: nowrap;
-            overflow: hidden;
-            box-sizing: border-box;
-            font-size: 18px;
-            font-weight: 700;
-            transition: transform 0.3s;
-        }
-
-        footer marquee:hover {
-            animation-play-state: paused;
-        }
-
-        /* Quote Card Animation */
-        .quote-card {
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-
-        .quote-card:first-child {
-            opacity: 1;
-        }
-    </style>
+       
+ 
 </head>
 <body>
     <header>
@@ -72,6 +46,7 @@
         </div>
     </main>
     <footer>
+       
         <marquee behavior="" direction="left" class="marq">
             I used to think I was lost, but now I see I was just exploring. Every wrong turn was a lesson, a chapter in the story of becoming who I am. I am not defined by my past mistakes but by how I rise above them. My strength is not in perfection but in the courage to keep going, even when the road gets rough. My value isn’t determined by others' approval but by the love I hold for myself. I am a work in progress, constantly evolving, growing, and becoming more of who I am meant to be. The journey is mine, and I am learning to cherish every step, every stumble, and every victory. In this moment, I choose to be gentle with myself, to honor my journey, and to trust that I am exactly where I need to be.
         </marquee>
@@ -88,7 +63,7 @@
                 quotes[currentIndex].style.opacity = 1;
             }
 
-            setInterval(showNextQuote, 3000); // Change quote every 3 seconds
+            setInterval(showNextQuote, 3000); 
 
             
         });
